@@ -1,0 +1,7 @@
+{
+    "header.search": "Search",
+    "header.search.placeholder": "Search Name",
+
+    "content.loading": "Loading table of contents",
+    "content.loading.error": "An error occurred when loading the table of contents. Please try again."
+}

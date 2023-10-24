@@ -1,0 +1,45 @@
+@use 'src/styles/colors';
+@use 'src/styles/variables';
+
+
+$rk-spinner-size: 50px;
+
+.rk-loading-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    h5 {
+        font-weight: variables.$rk-font-light;
+    }
+
+    .rk-spinner {
+        position: relative;
+        width: $rk-spinner-size;
+        height: $rk-spinner-size;
+        margin-bottom: 20px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: $rk-spinner-size;
+            height: $rk-spinner-size;
+            margin-top: -50%;
+            margin-left: -50%;
+            border-radius: 50%;
+            border: 2px solid colors.$rk-spinner-bg-color;
+            border-top-color: colors.$rk-spinner-fg-color;;
+            animation: spin 1s linear infinite;
+        }
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

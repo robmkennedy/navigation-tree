@@ -1,0 +1,12 @@
+@use 'src/styles/variables';
+
+.rk-message-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    h5 {
+        font-weight: variables.$rk-font-light;
+    }
+}
