@@ -12,9 +12,7 @@ type ContentNodeProps = {
 const ContentNode = ({ item }: ContentNodeProps) => {
 
     return (
-        <div className='rk-content-node'>
-            <h5>{item.name}</h5>
-        </div>
+        <div className='rk-content-node'>{item.name}</div>
     );
 };
 

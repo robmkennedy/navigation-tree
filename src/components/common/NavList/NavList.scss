@@ -1,12 +1,19 @@
-@use 'src/styles/variables';
+@use 'src/styles/colors';
 
-.rk-message-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+.rk-nav-list {
+    width: 100%;
+    overflow: auto;
+    border: 1px solid lightblue;
 
-    h5 {
-        font-weight: variables.$rk-font-light;
+    .rk-nav-list-item {
+        cursor: pointer;
+
+        &.active {
+            background-color: colors.$rk-highlight;
+        }
+
+        &:hover {
+            background-color: colors.$rk-hover;
+        }
     }
 }

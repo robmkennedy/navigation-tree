@@ -4,6 +4,8 @@ import { useSelectedContentItemSelector } from 'hooks/selectorHooks';
 import { useAppDispatch } from 'hooks/stateHooks';
 import { contentItemSelected } from 'state/slices/appSlice';
 import { ContentItem } from 'utils/types';
+import { useTranslation } from 'react-i18next';
+
 import './ListPanel.scss';
 
 type ListPanelProps = {
@@ -16,6 +18,8 @@ type ListPanelProps = {
  * for each item. 
  */
 const ListPanel = ({ items }: ListPanelProps) => {
+    const { t } = useTranslation();
+
     const dispatch = useAppDispatch();
     const selectedItem = useSelectedContentItemSelector();
 
@@ -29,7 +33,7 @@ const ListPanel = ({ items }: ListPanelProps) => {
 
     return (
         <section className='rk-list-panel'>
-            <NavList items={items} selectedItem={selectedItem} render={render} onSelect={handleSelect} />
+            <NavList items={items} selectedItem={selectedItem} render={render} onSelect={handleSelect} emptyText={t('list.empty')} />
         </section>
     );
 }

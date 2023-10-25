@@ -3,5 +3,8 @@
     "header.search.placeholder": "Search Name",
 
     "content.loading": "Loading table of contents",
-    "content.loading.error": "An error occurred when loading the table of contents. Please try again."
+    "content.loading.error": "An error occurred when loading the table of contents. Please try again.",
+
+    "list.empty": "There are no items to show in the list.",
+    "tree.empty": "There are no items to show in the tree."
 }

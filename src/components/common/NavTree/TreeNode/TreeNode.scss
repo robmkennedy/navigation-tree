@@ -1,0 +1,20 @@
+@use 'src/styles/colors';
+
+.rk-tree-node {
+    display: flex;
+    padding: 10px;
+
+    &.active {
+        background-color: colors.$rk-highlight;
+    }
+
+    &:hover {
+        background-color: colors.$rk-hover;
+    }
+}
+
+.rk-tree {
+    .rk-tree-node {
+        padding-left: 30px;
+    }
+}

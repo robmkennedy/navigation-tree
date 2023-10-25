@@ -13,7 +13,8 @@ const ContentDetails = ({ item }: ContentDetailsProps) => {
 
     return (
         <div className='rk-content-details'>
-            <h5>{item.name}</h5>
+            <h4>{item.name}</h4>
+            <p>{item.content}</p>
         </div>
     );
 };

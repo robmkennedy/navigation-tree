@@ -1,12 +1,14 @@
 @use 'src/styles/variables';
 
 .rk-content-details {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    padding: 10px;
 
-    h5 {
+    h4 {
+        margin: 5px 0;
+    }
+
+    p {
+        margin: 0;
         font-weight: variables.$rk-font-light;
     }
 }

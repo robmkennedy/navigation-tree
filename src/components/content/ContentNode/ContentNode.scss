@@ -1,12 +1,5 @@
 @use 'src/styles/variables';
 
 .rk-content-node {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    h5 {
-        font-weight: variables.$rk-font-light;
-    }
+    font-weight: variables.$rk-font-light;
 }

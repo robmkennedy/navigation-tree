@@ -1,12 +1,11 @@
 @use 'src/styles/variables';
 
 .rk-nav-tree {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid lightblue;
 
-    h5 {
-        font-weight: variables.$rk-font-light;
+    .rk-nav-tree-item {
+        cursor: pointer;
     }
 }

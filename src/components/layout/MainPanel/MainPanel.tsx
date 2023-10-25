@@ -1,11 +1,12 @@
-import ErrorBox from 'components/common/ErrorBox/ErrorBox';
-import LoadingBox from 'components/common/LoadingBox/LoadingBox';
 import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
+import ErrorBox from 'components/common/ErrorBox/ErrorBox';
+import LoadingBox from 'components/common/LoadingBox/LoadingBox';
+import ListPanel from 'components/layout/ListPanel/ListPanel';
+import TreePanel from 'components/layout/TreePanel/TreePanel';
 import { useGetContentItemsQuery } from 'state/slices/contentApiSlice';
+import { buildTreeStructure } from 'utils/helpers';
 import './MainPanel.scss';
-import ListPanel from '../ListPanel/ListPanel';
-import TreePanel from '../TreePanel/TreePanel';
 
 /**
  * This is the main area of the application. When the app loads for the first time, 
@@ -27,12 +28,10 @@ const MainPanel = () => {
     }
     else if (data) {
         const { content } = data;
-
-        debugger;
-
+        const treeStructure = buildTreeStructure(content.document)
         markup = (
             <Fragment>
-                <TreePanel items={content.document}/>
+                <TreePanel items={treeStructure}/>
                 <ListPanel items={content.document}/>
             </Fragment>
         );
