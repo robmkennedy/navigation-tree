@@ -1,4 +1,4 @@
-# Navigate Tree
+# Navigation Tree
 
 A simple application to demonstrate using redux state handling to highlight state across components.
 
